@@ -23,22 +23,22 @@ export const routes = createBrowserRouter([
             {
                 path: "/",
                 element: <CoursesPage />,
-                loader: () => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/courses/all`),
+                loader: () => fetch(`http://localhost:5000/courses/all`),
             },
             {
                 path: "/courses",
                 element: <CoursesPage />,
-                loader: () => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/courses/all`),
+                loader: () => fetch(`http://localhost:5000/courses/all`),
             },
             {
                 path: "/category/:id",
                 element: <Category />,
-                loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/category/${params.id}`),
+                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`),
             },
             {
                 path: "/course/:id",
                 element: <Courses />,
-                loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/course/${params.id}`),
+                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`),
             },
             {
                 path: "account",
@@ -50,7 +50,7 @@ export const routes = createBrowserRouter([
     {
         path: "/chekout/:id",
         element: <PrivetRoute><Checkout /></PrivetRoute>,
-        loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/course/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`),
     },
     {
         path: "/home",

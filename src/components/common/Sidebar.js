@@ -6,7 +6,7 @@ const Sidebar = () => {
     const [courseTitles, setCourseTitles] = useState([])
 
     useEffect(() => {
-        fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/courses/all`)
+        fetch(`http://localhost:5000/courses/all`)
             .then(res => res.json())
             .then(data => setCourseTitles(data))
 
